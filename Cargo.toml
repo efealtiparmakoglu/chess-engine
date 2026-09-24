@@ -1,0 +1,13 @@
+[package]
+name = "chess-engine"
+version = "1.0.0"
+edition = "2021"
+description = "Chess move generation verified by perft, alpha-beta search, PGN output and a material-evolution trace"
+license = "MIT"
+
+[lib]
+name = "chess_engine_lib"
+path = "src/lib.rs"
+
+[profile.release]
+opt-level = 3

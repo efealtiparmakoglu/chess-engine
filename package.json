@@ -1,0 +1,11 @@
+{
+  "name": "chess-engine-web",
+  "version": "1.0.0",
+  "description": "Offline game viewer for chess-engine: replay board plus material-evolution chart",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22.18.0" },
+  "scripts": {
+    "build:web": "node build-web.ts"
+  }
+}

@@ -1,0 +1,8 @@
+[Event "chess-engine self-play"]
+[Site "local"]
+[Date "UTC 1790272808"]
+[White "chess-engine d3"]
+[Black "chess-engine d3"]
+[Result "*"]
+
+1. Nc3 a5 2. Nf3 c5 3. a4 f5 4. h4 e5 5. b4 ab4 6. d4 b3 *

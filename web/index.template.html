@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chess-engine viewer — offline</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    font-family: ui-monospace, monospace;
+    background: #f4f1ea; color: #212121;
+    display: flex; gap: 28px; padding: 24px; margin: 0; align-items: flex-start;
+  }
+  h1 { font-size: 18px; margin: 0 0 10px; }
+  .panel { display: flex; flex-direction: column; gap: 10px; }
+  #board {
+    display: grid; grid-template-columns: repeat(8, 44px);
+    border: 3px solid #212121; width: max-content;
+  }
+  .cell {
+    width: 44px; height: 44px; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 30px; line-height: 1;
+  }
+  .light { background: #f0ebdd; }
+  .dark { background: #b9a98c; }
+  #chart { background: #fffdf7; border: 1px solid #b9b2a3; }
+  textarea { font: inherit; width: 420px; height: 130px; }
+  button, input {
+    font: inherit; background: #fffdf7; border: 1px solid #b9b2a3;
+    padding: 5px 10px; cursor: pointer;
+  }
+  #ply { width: 300px; }
+  #status { min-height: 18px; }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <h1>chess-engine game viewer <small>(offline)</small></h1>
+    <div id="board"></div>
+    <div class="noprint" style="display:flex; gap:8px; align-items:center;">
+      <button id="first">⏮</button>
+      <button id="prev">◀</button>
+      <input id="ply" type="range" min="0" max="0" value="0">
+      <button id="next">▶</button>
+      <button id="last">⏭</button>
+    </div>
+    <div id="status"></div>
+    <div id="chart"></div>
+  </div>
+  <div class="panel noprint">
+    <h2>load a game</h2>
+    <p>Run <code>chess-engine play -d 3</code> and paste the produced
+       <code>game.json</code> here:</p>
+    <textarea id="game-json" placeholder='{"sans":[...],"fens":[...],"material":[...]}'></textarea>
+    <button id="load">load game</button>
+    <p>The chart shows material (pawn-value totals) for both sides after
+       every ply — blunders and exchanges are visible as cliffs.</p>
+  </div>
+<script type="module">
+/*__GAME__*/
+</script>
+</body>
+</html>
