@@ -111,7 +111,7 @@ fn main() {
                 "{{\"sans\":{},\"fens\":{},\"material\":{}}}",
                 json_string_array(&game.sans),
                 json_string_array(&game.fens),
-                format!(
+                format_args!(
                     "[{}]",
                     game.material
                         .iter()
